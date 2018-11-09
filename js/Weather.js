@@ -38,16 +38,16 @@ class Weather {
   }
 
   defineSunMoonIcon(sunriseInt, sunsetInt) {
-    const sunrise = new tizen.TZDate(new Date(sunriseInt));
-    const sunset = new tizen.TZDate(new Date(sunsetInt));
+    const sunrise = new tizen.TZDate(new Date(sunriseInt * 1000));
+    const sunset = new tizen.TZDate(new Date(sunsetInt * 1000));
     const now = tizen.time.getCurrentDateTime();
 
     if (sunrise.earlierThan(now) && now.earlierThan(sunset)) {
-      this.sunElement.style.display = 'none';
-      this.moonElement.style.display = 'unset';
-    } else {
       this.sunElement.style.display = 'unset';
       this.moonElement.style.display = 'none';
+    } else {
+      this.sunElement.style.display = 'none';
+      this.moonElement.style.display = 'unset';
     }
   }
 
