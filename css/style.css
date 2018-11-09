@@ -77,5 +77,23 @@ html, body {
 }
 
 #moon-icon {
+  color: #9E9E9E;
+}
+
+#cloud-icon {
   color: white;
+  font-size: 10px;
+  width: 1px;
+  height: 20px;
+  text-align: end;
+  /* display: none; */
+}
+
+#rain-icon {
+  color: white;
+  font-size: 14px;
+  width: 1px;
+  height: 20px;
+  text-align: end;
+  display: none;
 }

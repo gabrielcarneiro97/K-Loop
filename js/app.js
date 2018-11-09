@@ -1,6 +1,7 @@
 const batteryBar = new BatteryBar('battery');
 const clock = new Clock('hora', 'minuto', 'segundo');
-const weather = new Weather('sun-icon', 'moon-icon');
+const weather = new Weather('sun-icon', 'moon-icon', 'cloud-icon', 'rain-icon');
+
 
 function rotateElement(elementID, angle) {
   var element = document.querySelector("#" + elementID);
@@ -12,6 +13,8 @@ function update() {
   batteryBar.tic();
   clock.tic();
   weather.tic();
+
+  // weather.weatherUpdate();
 }
 
 function bindEvents() {
@@ -27,7 +30,7 @@ function bindEvents() {
 
 window.onload = () => {
   bindEvents();
-  // Update the watch hands every second
+
   setInterval(function() {
     update();
   }, 1000);

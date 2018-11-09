@@ -1,7 +1,9 @@
 class Weather {
-  constructor(sunId, moonId) {
+  constructor(sunId, moonId, cloudId, rainId) {
     this.sunElement = document.getElementById(sunId);
     this.moonElement = document.getElementById(moonId);
+    this.cloudElement = document.getElementById(cloudId);
+    this.rainElement = document.getElementById(rainId);
     this.pointers = document.getElementsByClassName('pointer');
   }
 
@@ -21,6 +23,8 @@ class Weather {
     });
 
     this.moonElement.style.transform = 'rotate(' + (-angle) + 'deg)';
+    this.rainElement.style.transform = 'rotate(' + (-angle) + 'deg)';
+    this.cloudElement.style.transform = 'rotate(' + (-angle) + 'deg)';
   }
 
   defineIcon() {
@@ -41,6 +45,28 @@ class Weather {
 
 
       resolve();
+    });
+  }
+
+  weatherUpdate() {
+    return new Promise((resolve) => {
+      navigator.geolocation.getCurrentPosition((pos) => {
+        this.coords = pos.coords;
+
+        const clouds = false;
+        const rain = false;
+
+        if (rain) {
+          this.rainElement.style.display = '';
+          this.cloudElement.style.display = 'none';
+        } else if (clouds) {
+          this.rainElement.style.display = 'none';
+          this.cloudElement.style.display = '';
+        } else {
+          this.rainElement.style.display = 'none';
+          this.cloudElement.style.display = 'none';
+        }
+      }, err => console.error(err));
     });
   }
 }
