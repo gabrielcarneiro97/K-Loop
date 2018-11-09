@@ -1,6 +1,6 @@
 const batteryBar = new BatteryBar('battery');
-const clock = new Clock('hora', 'minuto', 'segundo');
-const weather = new Weather('sun-icon', 'moon-icon', 'cloud-icon', 'rain-icon');
+const clock = new Clock('hora', 'minuto', 'segundo', 'dia', 'mes');
+const weather = new Weather('sun-icon', 'moon-icon', 'cloud-icon', 'rain-icon', 'snow-icon', 'temp', 'coord');
 
 
 function rotateElement(elementID, angle) {
@@ -8,7 +8,6 @@ function rotateElement(elementID, angle) {
 
   element.style.transform = "rotate(" + angle + "deg)";
 }
-
 
 function everySec() {
   batteryBar.tic();

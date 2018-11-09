@@ -1,9 +1,10 @@
 html, body {
   width: 100%;
   height: 100%;
+  max-height: 360px;
   margin: 0px;
   overflow: hidden;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Nova Mono', monospace;
 }
 
 #container {
@@ -33,8 +34,8 @@ html, body {
 #battery {
   top: 0px;
   left: 0px;
-  height: 360px;
-  width: 360px;
+  height: 359px;
+  width: 359px;
 }
 
 #battery-icon {
@@ -50,7 +51,7 @@ html, body {
   height: 40px;
   left: 0px;
   text-align: center;
-  font-size: 38px;
+  font-size: 40px;
 }
 
 #hora {
@@ -63,16 +64,33 @@ html, body {
   top: 198px;
 }
 
-#ver {
+.data {
+  color: white;
+  right: 0px;
+  width: 260px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#dia {
+  top: 155px;
+}
+
+#mes {
+  top: 177px;
+}
+
+#coord {
   font-size: 10px;
   top: 100px;
+  display: none;
 }
 
 #temp {
   font-size: 15px;
-  top: 173px;
+  top: 175px;
   left: 0px;
-  width: 230px;
+  width: 250px;
   color: white;
   text-align: center;
 }
@@ -83,7 +101,7 @@ html, body {
   left: 188px;
   text-align: end;
   transform-origin: top left;
-  width: 135px;
+  width: 140px;
 }
 
 #sun-icon {
@@ -92,6 +110,7 @@ html, body {
 
 #moon-icon {
   color: #9E9E9E;
+  display: none;
 }
 
 .pointer-2 {
@@ -100,7 +119,7 @@ html, body {
   left: 188px;
   text-align: end;
   transform-origin: top left;
-  width: 140px;
+  width: 145px;
 }
 
 #cloud-icon {
@@ -112,5 +131,11 @@ html, body {
 #rain-icon {
   color: white;
   font-size: 13px;
+  display: none;
+}
+
+#snow-icon {
+  color: white;
+  font-size: 15px;
   display: none;
 }
