@@ -1,0 +1,64 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+}
+
+#components-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.el {
+    position: absolute;
+    margin: 0;
+}
+
+#battery {
+    top: 0px;
+    left: 0px;
+    height: 360px;
+    width: 360px;
+}
+
+#battery-icon {
+    top: 2px;
+    left: 175px;
+    color: white;
+    font-size: 7px;
+}
+
+.relogio {
+    color: white;
+    width: 360px;
+    height: 40px;
+    left: 0px;
+    text-align: center;
+    font-size: 38px;
+}
+
+#hora {
+    top: 118px;
+}
+#minuto {
+    top: 158px;
+}
+#segundo {
+    top: 198px;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/MyWatchFace" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="PARn5vwcpJ.MyWatchFace" package="PARn5vwcpJ" required_version="2.3.1"/>
+    <tizen:category name="http://tizen.org/category/wearable_clock"/>
+    <tizen:privilege name="http://tizen.org/privilege/system"/>
+    <tizen:privilege name="http://tizen.org/privilege/telephony"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.shape.circle"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="icon.png"/>
+    <name>MyWatchFace</name>
+    <tizen:profile name="wearable"/>
+</widget>
