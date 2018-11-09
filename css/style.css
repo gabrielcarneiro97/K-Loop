@@ -63,6 +63,20 @@ html, body {
   top: 198px;
 }
 
+#ver {
+  font-size: 10px;
+  top: 100px;
+}
+
+#temp {
+  font-size: 15px;
+  top: 173px;
+  left: 0px;
+  width: 230px;
+  color: white;
+  text-align: center;
+}
+
 .pointer {
   z-index: 999;
   top: 172px;

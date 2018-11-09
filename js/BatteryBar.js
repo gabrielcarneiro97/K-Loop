@@ -21,7 +21,7 @@ class BatteryBar {
   animate(level, color) {
     if (color) this.setColor(color);
     this.bar.animate(level, {
-    duration: 10,
+    duration: 0,
       step: (state, circle) => {
         circle.path.setAttribute('stroke', this.color);
       },

@@ -9,32 +9,37 @@ function rotateElement(elementID, angle) {
   element.style.transform = "rotate(" + angle + "deg)";
 }
 
-console.log('location', tizen);
 
-function update() {
+function everySec() {
   batteryBar.tic();
   clock.tic();
   weather.tic();
 
-  // weather.weatherUpdate();
+}
+
+function fiveMin() {
+  weather.weatherUpdate();
 }
 
 function bindEvents() {
   // Add an event listener to update the screen immediately when the device wakes up
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) {
-      updateTime();
+      everySec();
     }
   });
 }
 
 
-
 window.onload = () => {
   bindEvents();
-  weather.weatherUpdate();
 
-  setInterval(function() {
-    update();
+  setInterval(() => {
+    everySec();
   }, 1000);
+
+  fiveMin();
+  setInterval(() => {
+    fiveMin();
+  }, 30000);
 };

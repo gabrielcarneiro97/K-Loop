@@ -1,3 +1,7 @@
+const openWeatherKey = '67793f8e2edddad949ad82665b43655a';
+
+const ktoc = (kelvin) => parseFloat(kelvin) - 273.15;
+
 class Weather {
   constructor(sunId, moonId, cloudId, rainId) {
     this.sunElement = document.getElementById(sunId);
@@ -5,6 +9,7 @@ class Weather {
     this.cloudElement = document.getElementById(cloudId);
     this.rainElement = document.getElementById(rainId);
     this.pointers = document.getElementsByClassName('pointer');
+    this.coordElement = document.getElementById('coord');
   }
 
   setTime() {
@@ -64,15 +69,32 @@ class Weather {
 
   weatherUpdate() {
     return new Promise((resolve) => {
-      console.log(tizen.humanactivitymonitor);
-      tizen.humanactivitymonitor.getHumanActivityData('GPS', (gps) => {
-        console.log(gps);
+      navigator.geolocation.getCurrentPosition((pos) => {
+        const { longitude, latitude } = pos.coords;
+        axios.get('https://api.openweathermap.org/data/2.5/weather', {
+          params: {
+            lat: parseInt(latitude, 10),
+            lon: parseInt(longitude, 10),
+            appId: openWeatherKey,
+          }
+        }).then((data) => console.log(data)).catch(err => console.error(err));
+        this.coordElement.innerHTML = `Long: ${pos.coords.longitude} Lat: ${pos.coords.latitude}`;
+      });
+      // try {
+      //   tizen.humanactivitymonitor.getHumanActivityData('GPS', (gps) => {
 
-        const clouds = false;
-        const rain = false;
+      //     this.coordElement.innerHTML = `Long: ${gps.longitude} Lat: ${gps.latitude}`;
 
-        defineRainCloudIcon(rain, clouds);
-      }, err => console.error(err));
+      //     const clouds = false;
+      //     const rain = false;
+
+      //     defineRainCloudIcon(rain, clouds);
+      //   }, (err) => {
+      //     this.coordElement.innerHTML = err; 
+      //   }); 
+      // } catch (error) {
+      //   this.coordElement.innerHTML = error;
+      // }
     });
   }
 }
