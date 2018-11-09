@@ -1,5 +1,6 @@
 const batteryBar = new BatteryBar('battery');
 const clock = new Clock('hora', 'minuto', 'segundo');
+const weather = new Weather('sun-icon', 'moon-icon');
 
 function rotateElement(elementID, angle) {
   var element = document.querySelector("#" + elementID);
@@ -10,6 +11,7 @@ function rotateElement(elementID, angle) {
 function update() {
   batteryBar.tic();
   clock.tic();
+  weather.tic();
 }
 
 function bindEvents() {
