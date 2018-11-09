@@ -9,6 +9,8 @@ function rotateElement(elementID, angle) {
   element.style.transform = "rotate(" + angle + "deg)";
 }
 
+console.log('location', tizen);
+
 function update() {
   batteryBar.tic();
   clock.tic();
@@ -30,6 +32,7 @@ function bindEvents() {
 
 window.onload = () => {
   bindEvents();
+  weather.weatherUpdate();
 
   setInterval(function() {
     update();

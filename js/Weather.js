@@ -9,6 +9,7 @@ class Weather {
 
   setTime() {
     const datetime = tizen.time.getCurrentDateTime();
+
     this.hour = datetime.getHours();
     this.minute = datetime.getMinutes();
     this.second = datetime.getSeconds();
@@ -27,7 +28,7 @@ class Weather {
     this.cloudElement.style.transform = 'rotate(' + (-angle) + 'deg)';
   }
 
-  defineIcon() {
+  defineSunMoonIcon() {
     if (this.hour >= 18 || this.hour <= 6) {
       this.sunElement.style.display = 'none';
       this.moonElement.style.display = '';
@@ -37,10 +38,23 @@ class Weather {
     }
   }
 
+  defineRainCloudIcon(rain, clouds) {
+    if (rain) {
+      this.rainElement.style.display = '';
+      this.cloudElement.style.display = 'none';
+    } else if (clouds) {
+      this.rainElement.style.display = 'none';
+      this.cloudElement.style.display = '';
+    } else {
+      this.rainElement.style.display = 'none';
+      this.cloudElement.style.display = 'none';
+    }
+  }
+
   tic() {
     return new Promise((resolve) => {
       this.setTime();
-      this.defineIcon();
+      this.defineSunMoonIcon();
       this.rotate();
 
 
@@ -50,22 +64,14 @@ class Weather {
 
   weatherUpdate() {
     return new Promise((resolve) => {
-      navigator.geolocation.getCurrentPosition((pos) => {
-        this.coords = pos.coords;
+      console.log(tizen.humanactivitymonitor);
+      tizen.humanactivitymonitor.getHumanActivityData('GPS', (gps) => {
+        console.log(gps);
 
         const clouds = false;
         const rain = false;
 
-        if (rain) {
-          this.rainElement.style.display = '';
-          this.cloudElement.style.display = 'none';
-        } else if (clouds) {
-          this.rainElement.style.display = 'none';
-          this.cloudElement.style.display = '';
-        } else {
-          this.rainElement.style.display = 'none';
-          this.cloudElement.style.display = 'none';
-        }
+        defineRainCloudIcon(rain, clouds);
       }, err => console.error(err));
     });
   }

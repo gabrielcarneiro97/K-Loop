@@ -80,20 +80,23 @@ html, body {
   color: #9E9E9E;
 }
 
+.pointer-2 {
+  z-index: 999;
+  top: 172px;
+  left: 188px;
+  text-align: end;
+  transform-origin: top left;
+  width: 140px;
+}
+
 #cloud-icon {
   color: white;
   font-size: 10px;
-  width: 1px;
-  height: 20px;
-  text-align: end;
-  /* display: none; */
+  display: none;
 }
 
 #rain-icon {
   color: white;
-  font-size: 14px;
-  width: 1px;
-  height: 20px;
-  text-align: end;
+  font-size: 13px;
   display: none;
 }
