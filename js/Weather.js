@@ -3,17 +3,18 @@ const openWeatherKey = '67793f8e2edddad949ad82665b43655a';
 const ktoc = (kelvin) => parseFloat(kelvin) - 273.15;
 
 class Weather {
-  constructor(sunId, moonId, cloudId, rainId, snowId, tempId, coordId) {
-    this.sunElement = document.getElementById(sunId);
-    this.moonElement = document.getElementById(moonId);
-    this.cloudElement = document.getElementById(cloudId);
-    this.rainElement = document.getElementById(rainId);
-    this.snowElement = document.getElementById(snowId);
+  constructor(sunId, moonId, cloudId, rainId, snowId, tempId, coordId, locId) {
+    this.sunElement = dom.byId(sunId);
+    this.moonElement = dom.byId(moonId);
+    this.cloudElement = dom.byId(cloudId);
+    this.rainElement = dom.byId(rainId);
+    this.snowElement = dom.byId(snowId);
 
-    this.tempElement = document.getElementById(tempId);
-    this.coordElement = document.getElementById(coordId);
+    this.tempElement = dom.byId(tempId);
 
-    this.pointers = document.getElementsByClassName('pointer');
+    this.coordElement = dom.byId(coordId);
+    this.locElement = dom.byId(locId);
+
   }
 
   setTime() {
@@ -24,68 +25,70 @@ class Weather {
     this.second = datetime.getSeconds();
   }
 
-  rotate() {
-
-    const angle = ((this.hour + (this.minute / 60) + (this.second / 3600)) * 30) - 98;
-
-    Array.from(this.pointers).forEach((el) => {
-      el.style.transform = 'rotate(' + angle + 'deg)';
-    });
-
-    this.moonElement.style.transform = 'rotate(' + (-angle) + 'deg)';
-    this.rainElement.style.transform = 'rotate(' + (-angle) + 'deg)';
-    this.cloudElement.style.transform = 'rotate(' + (-angle) + 'deg)';
-  }
-
   defineSunMoonIcon(sunriseInt, sunsetInt) {
     const sunrise = new tizen.TZDate(new Date(sunriseInt * 1000));
     const sunset = new tizen.TZDate(new Date(sunsetInt * 1000));
     const now = tizen.time.getCurrentDateTime();
 
     if (sunrise.earlierThan(now) && now.earlierThan(sunset)) {
-      this.sunElement.style.display = 'unset';
-      this.moonElement.style.display = 'none';
+      showElement(this.sunElement);
+      hideElement(this.moonElement);
     } else {
-      this.sunElement.style.display = 'none';
-      this.moonElement.style.display = 'unset';
+      hideElement(this.sunElement);
+      showElement(this.moonElement);
     }
   }
 
   defineRainCloudIcon(code) {
     if (code >= 200 && code < 600) {
-      this.rainElement.style.display = 'unset';
-      this.cloudElement.style.display = 'none';
-      this.snowElement.style.display = 'none';
+      showElement(this.rainElement);
+      hideElement(this.cloudElement);
+      hideElement(this.snowElement);
     } else if (code >= 600 && code <= 622) {
-      this.snowElement.style.display = 'unset';
-      this.rainElement.style.display = 'none';
-      this.cloudElement.style.display = 'none';
+      showElement(this.snowElement);
+      hideElement(this.rainElement);
+      hideElement(this.cloudElement);
     } else if (code >= 800) {
-      this.cloudElement.style.display = 'unset';
-      this.rainElement.style.display = 'none';
-      this.snowElement.style.display = 'none';
+      showElement(this.cloudElement);
+      hideElement(this.rainElement);
+      hideElement(this.snowElement);
     } else {
-      this.rainElement.style.display = 'none';
-      this.cloudElement.style.display = 'none';
-      this.snowElement.style.display = 'none';
+      hideElement(this.rainElement);
+      hideElement(this.cloudElement);
+      hideElement(this.snowElement);
     }
 
-  }
-
-  padding(el) {
-    el = el.toString();
-    if (el.length === 1) return '0' + el;
-    else return el;
   }
 
   tic() {
     return new Promise((resolve) => {
       this.setTime();
-      this.rotate();
-
-
       resolve();
     });
+  }
+
+  lonLat(lon, lat) {
+    // Lon (-) W (+) E
+    // Lat (-) S (+) N
+    let text = '';
+    let lonTxt = '';
+    let latTxt = '';
+
+    if (lon < 0) {
+      lonTxt = `${(-lon)}°W`;
+    } else {
+      lonTxt = `${lon}°W`;      
+    }
+
+    if (lat < 0) {
+      latTxt = `${(-lat)}°S`;
+    } else {
+      latTxt = `${lat}°N`;      
+    }
+
+    text = `${latTxt} ${lonTxt}`;
+
+    return text;
   }
 
   weatherUpdate() {
@@ -102,19 +105,23 @@ class Weather {
             appId: openWeatherKey,
           }
         }).then(({ data }) => {
-          console.log(data);
           let { temp } = data.main;
+          const { name } = data;
           const { sunrise, sunset } = data.sys;
           const { id } = data.weather[0];
 
           temp = ktoc(temp);
 
-          this.tempElement.innerHTML = `${this.padding(temp.toFixed(0))}°C`;
+          this.tempElement.innerHTML = `${pad(Math.round(temp))}°C`;
 
           this.defineSunMoonIcon(sunrise, sunset);
           this.defineRainCloudIcon(id);
-        }).catch(err => console.error(err));
-        this.coordElement.innerHTML = `Lon: ${longitude} Lat: ${latitude}`;
+
+          this.locElement.innerHTML = name;
+          resolve();
+        }).catch(err => reject(err));
+
+        this.coordElement.innerHTML = this.lonLat(longitude, latitude);
       });
     });
   }

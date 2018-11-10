@@ -1,6 +1,6 @@
-const batteryBar = new BatteryBar('battery');
+const batteryBar = new BatteryBar('battery-bar');
 const clock = new Clock('hora', 'minuto', 'segundo', 'dia', 'mes');
-const weather = new Weather('sun-icon', 'moon-icon', 'cloud-icon', 'rain-icon', 'snow-icon', 'temp', 'coord');
+const weather = new Weather('sun-icon', 'moon-icon', 'cloud-icon', 'rain-icon', 'snow-icon', 'temp', 'coord', 'loc-name');
 
 
 function rotateElement(elementID, angle) {
@@ -16,7 +16,7 @@ function everySec() {
 
 }
 
-function fiveMin() {
+function everyMin() {
   weather.weatherUpdate();
 }
 
@@ -37,8 +37,8 @@ window.onload = () => {
     everySec();
   }, 1000);
 
-  fiveMin();
+  everyMin();
   setInterval(() => {
-    fiveMin();
-  }, 30000);
+    everyMin();
+  }, 60000);
 };

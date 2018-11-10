@@ -15,35 +15,47 @@
     <div id="container">
       <div id="background">
         <div id="components-main">
-          <div id="battery" class="el"></div>
-          <i id="battery-icon" class="el fas fa-bolt"></i>
-          <div class="el pointer">
-            <i id="sun-icon" class="el fas fa-sun"></i>
+
+          <div id="clima" class="el">
+            <p id="temp" class="el"></p>
+            <div id="tempo" class="el">
+              <i id="sun-icon" class="el fas fa-sun"></i>
+              <i id="moon-icon" class="el fas fa-moon"></i>
+
+              <i id="cloud-icon" class="el fas fa-cloud"></i>
+              <i id="rain-icon" class="el fas fa-cloud-showers-heavy"></i>
+              <i id="snow-icon" class="el fas fa-snowflake"></i>
+
+            </div>
           </div>
-          <div class="el pointer">
-            <i id="moon-icon" class="el fas fa-moon"></i>
+
+          <div id="relogio" class="el">
+            <p id="hora" class="el">00</p>
+            <p id="minuto" class="el">00</p>
+            <p id="segundo" class="el">00</p>
           </div>
-          <div class="el pointer pointer-2">
-            <i id="cloud-icon" class="el fas fa-cloud"></i>
+
+          <div id="loc" class="el">
+            <p id="loc-name" class="el"></p>
+            <p id="coord" class="el"></p>
           </div>
-          <div class="el pointer pointer-2">
-            <i id="rain-icon" class="el fas fa-cloud-showers-heavy"></i>
+
+          <div id="data" class="el">
+            <p id="dia" class="el">00</p>
+            <p id="mes" class="el">00</p>
           </div>
-          <div class="el pointer pointer-2">
-            <i id="snow-icon" class="el fas fa-snowflake"></i>
+
+          <div id="battery" class="el">
+            <div id="battery-bar" class="el"></div>
+            <i id="battery-icon" class="el fas fa-bolt"></i>
           </div>
-          <p id="temp" class="el"></p>          
-          <p id="coord" class="el relogio"></p>
-          <p id="hora" class="el relogio">00</p>
-          <p id="minuto" class="el relogio">00</p>
-          <p id="segundo" class="el relogio">00</p>
-          <p id="dia" class="el data">00</p>
-          <p id="mes" class="el data">00</p>
+
         </div>
       </div>
     </div>
     <script src="dependencies/progressbar.min.js"></script>
     <script src="dependencies/axios.min.js"></script>
+    <script src="js/functions.js"></script>
     <script src="js/BatteryBar.js"></script>
     <script src="js/Clock.js"></script>
     <script src="js/Weather.js"></script>
