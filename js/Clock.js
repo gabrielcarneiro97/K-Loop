@@ -13,8 +13,8 @@ class Clock {
       this.horaDomElement.innerHTML = pad(datetime.getHours());
       this.minutoDomElement.innerHTML = pad(datetime.getMinutes());
       this.segundoDomElement.innerHTML = pad(datetime.getSeconds());
-      this.diaDomElement.innerHTML = pad(datetime.getUTCDate());
-      this.mesDomElement.innerHTML = pad(datetime.getUTCMonth() + 1);
+      this.diaDomElement.innerHTML = pad(datetime.getDate());
+      this.mesDomElement.innerHTML = pad(datetime.getMonth() + 1);
       
       resolve();
     });
