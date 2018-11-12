@@ -1,7 +1,3 @@
-const openWeatherKey = '67793f8e2edddad949ad82665b43655a';
-
-const ktoc = (kelvin) => parseFloat(kelvin) - 273.15;
-
 class Weather {
   constructor(sunId, moonId, cloudId, rainId, snowId, tempId, coordId, locId) {
     this.sunElement = dom.byId(sunId);
@@ -15,14 +11,6 @@ class Weather {
     this.coordElement = dom.byId(coordId);
     this.locElement = dom.byId(locId);
 
-  }
-
-  setTime() {
-    const datetime = tizen.time.getCurrentDateTime();
-
-    this.hour = datetime.getHours();
-    this.minute = datetime.getMinutes();
-    this.second = datetime.getSeconds();
   }
 
   defineSunMoonIcon(sunriseInt, sunsetInt) {
@@ -48,7 +36,7 @@ class Weather {
       showElement(this.snowElement);
       hideElement(this.rainElement);
       hideElement(this.cloudElement);
-    } else if (code >= 800) {
+    } else if (code > 800) {
       showElement(this.cloudElement);
       hideElement(this.rainElement);
       hideElement(this.snowElement);
@@ -60,13 +48,6 @@ class Weather {
 
   }
 
-  tic() {
-    return new Promise((resolve) => {
-      this.setTime();
-      resolve();
-    });
-  }
-
   lonLat(lon, lat) {
     // Lon (-) W (+) E
     // Lat (-) S (+) N
@@ -75,15 +56,19 @@ class Weather {
     let latTxt = '';
 
     if (lon < 0) {
-      lonTxt = `${(-lon)}°W`;
+      lonTxt = `${(-lon).toFixed(2)}°W`;
+    } else if (lon === 0) {
+      lonTxt = `${lon.toFixed(2)}°`;
     } else {
-      lonTxt = `${lon}°W`;      
+      lonTxt = `${lon.toFixed(2)}°W`;
     }
 
     if (lat < 0) {
-      latTxt = `${(-lat)}°S`;
+      latTxt = `${(-lat).toFixed(2)}°S`;
+    } else if (lat === 0) {
+      latTxt = `${lat.toFixed(2)}°`;      
     } else {
-      latTxt = `${lat}°N`;      
+      latTxt = `${lat.toFixed(2)}°N`;
     }
 
     text = `${latTxt} ${lonTxt}`;
@@ -91,13 +76,11 @@ class Weather {
     return text;
   }
 
-  weatherUpdate() {
+  update() {
     return new Promise((resolve) => {
       navigator.geolocation.getCurrentPosition((pos) => {
-        let { longitude, latitude } = pos.coords;
+        const { longitude, latitude } = pos.coords;
 
-        longitude = longitude.toFixed(2);
-        latitude = latitude.toFixed(2);
         axios.get('https://api.openweathermap.org/data/2.5/weather', {
           params: {
             lat: latitude,
@@ -105,23 +88,23 @@ class Weather {
             appId: openWeatherKey,
           }
         }).then(({ data }) => {
-          let { temp } = data.main;
           const { name } = data;
+          const { temp } = data.main;
           const { sunrise, sunset } = data.sys;
           const { id } = data.weather[0];
 
-          temp = ktoc(temp);
+          const tempCelsius = ktoc(temp);
 
-          this.tempElement.innerHTML = `${pad(Math.round(temp))}°C`;
+          html(this.tempElement, `${pad(Math.round(tempCelsius))}°C`);
 
           this.defineSunMoonIcon(sunrise, sunset);
           this.defineRainCloudIcon(id);
 
-          this.locElement.innerHTML = name;
+          html(this.locElement, name);
           resolve();
         }).catch(err => reject(err));
 
-        this.coordElement.innerHTML = this.lonLat(longitude, latitude);
+        html(this.coordElement, this.lonLat(longitude, latitude));
       });
     });
   }

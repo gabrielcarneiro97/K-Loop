@@ -12,12 +12,10 @@ function rotateElement(elementID, angle) {
 function everySec() {
   batteryBar.tic();
   clock.tic();
-  weather.tic();
-
 }
 
 function everyMin() {
-  weather.weatherUpdate();
+  weather.update();
 }
 
 function bindEvents() {

@@ -10,11 +10,11 @@ class Clock {
   tic() {
     return new Promise((resolve) => {
       var datetime = tizen.time.getCurrentDateTime();
-      this.horaDomElement.innerHTML = pad(datetime.getHours());
-      this.minutoDomElement.innerHTML = pad(datetime.getMinutes());
-      this.segundoDomElement.innerHTML = pad(datetime.getSeconds());
-      this.diaDomElement.innerHTML = pad(datetime.getDate());
-      this.mesDomElement.innerHTML = pad(datetime.getMonth() + 1);
+      html(this.horaDomElement, pad(datetime.getHours()));
+      html(this.minutoDomElement, pad(datetime.getMinutes()));
+      html(this.segundoDomElement, pad(datetime.getSeconds()));
+      html(this.diaDomElement, pad(datetime.getDate()));
+      html(this.mesDomElement, pad(datetime.getMonth() + 1));
       
       resolve();
     });
