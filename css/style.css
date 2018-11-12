@@ -31,6 +31,16 @@ html, body {
   margin: 0;
 }
 
+#log {
+  top: 10px;
+  left: 0px;
+  width: 360px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  display: none;
+}
+
 #battery {
   top: 180px;
   left: 180px;

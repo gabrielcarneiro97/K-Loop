@@ -42,3 +42,9 @@ function pad(el) {
 const openWeatherKey = '67793f8e2edddad949ad82665b43655a';
 
 const ktoc = (kelvin) => parseFloat(kelvin) - 273.15;
+
+const aodArr = Array.from(dom.byClass('hide-aod'));
+
+const aodOn = () => aodArr.forEach(el => hideElement(el));
+
+const aodOff = () => aodArr.forEach(el => showElement(el));

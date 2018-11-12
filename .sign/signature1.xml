@@ -12,15 +12,15 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>mhvrAVynXzqGDe6kcOCWb0lfjXE4tr48tqd6P8MFex4=</DigestValue>
+<DigestValue>Zu82MtiazbAOIJcl8gdKLgHqt/16vIL5H8lNOQKcB5g=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>3zcW59DAcTiBhEbHkh3vLHzyWytlPd72clsX6/CL48A=</DigestValue>
+<DigestValue>/QoKCWD1jFbLAAkdxlrq/FB84cxm8KA2JOSiD4J2xm0=</DigestValue>
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>J0iEkAYpKz/pcNBzD3mI0rJLGQjQZ7ixGJKAtXzWDK4=</DigestValue>
+<DigestValue>2S8JghohPHMgaMgPWeJtKjHnWp2lHakJtvEOA+P29BY=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Faxios.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -36,59 +36,59 @@
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fall.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>9yAnkk8gJzEVZYXJk1A4DxiQL5rx+uFhrzG5u4pTkQQ=</DigestValue>
+<DigestValue>JTWnEHBvsJlPCxyytThh54yjuYtMFzjr/Ye2YNtAEVA=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fall.min.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>GqfxOz87hBjuXksGf5XqXnx7nUBZeJdhbkk732fYJSI=</DigestValue>
+<DigestValue>dRCReDJ8Qr/v8xoVR4bk85Xpyc7NLdT8XBeAJXkfiwI=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fbrands.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>CS9GwsIDk1MLKyzlOWXrq98K6iedA6ssQlKovwp//IU=</DigestValue>
+<DigestValue>Z8A9h/Jiplekns7Absz99XnYODr7vXu7sI058q2prc8=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fbrands.min.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>6kZ87W8DM4uP33V0KbtIEoshE7N2GgyFuIbH5L6oAZ0=</DigestValue>
+<DigestValue>QAI9KCtKQaZBWGeOK2G/U1BT/d119zuoQO6gWbbZI8E=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Ffontawesome.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>BxP/KemQkP1Rsz+l80uq8n5GPB3/Dd8SCx30fZgt5Bo=</DigestValue>
+<DigestValue>MueXLFScKaJnYaNBH/j2lBrwahp40xYWaQj12dhQXlE=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Ffontawesome.min.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>QHwmrtseZj1ISBoY0wrrSkxTIopgAaEi4FIdlu3nzqs=</DigestValue>
+<DigestValue>4FLMDqZMl82BD6W8QlEfHv8MkLj8zcjmjY4trSrktLs=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fregular.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>axQelivfHjtazZ4P/k08zbI8160Qko+zOnnimuYoXUk=</DigestValue>
+<DigestValue>CGMgJ3W6z4RLQDUrWDhEJDOP+xO71Ct8v9VLmN403oA=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fregular.min.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>k2Kueg+fFRfIzfZ3bKfRI5xaMuSBOMQH8XqYTdwAOjI=</DigestValue>
+<DigestValue>Imh4fDwNlP20yv2pgagTD2MrvIIt7jNELRN4FFc9A50=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fsolid.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>cvt9+HDet487e3CBGcpQq7X5AwZfiM+wu+164qTj4H8=</DigestValue>
+<DigestValue>0gttx30p5HmTbWfkT0fE0Tthuz8QrPfpmruWuvSMtm8=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fsolid.min.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>nlN8j7tWp/x733LFdXrqtBSgnA7m6yAo9nxA0WtaJqo=</DigestValue>
+<DigestValue>s1Yl5FA3YFAiFO7i492sJ6D6S51Qu8rf70nMgzwJnqc=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fsvg-with-js.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>rTQsxNQwCw4XBqLJw4oNwWfKwLhv4rcKauw7NI9UQMM=</DigestValue>
+<DigestValue>RTC5l2xVfmKwMYk7JvmbytSvn2INHbJIbfKexQui/D4=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fsvg-with-js.min.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>cEHfNztyQS9PBGt+NUZmWGatKuj2sKpGnzyvnlbfiBQ=</DigestValue>
+<DigestValue>ZszpZs4+uTsS+il0BRT6Zn7qjZHtLP28v7tNiobY8kI=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fv4-shims.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>sUzXKXCQ530KOOnOvgyxeuDB0Z5vVtcUNxpAOeosuQg=</DigestValue>
+<DigestValue>FEE06eoe7Bo9QQEjJ2Y8mDeQhvjan3NyUV8mycCkD7s=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fcss%2Fv4-shims.min.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>3HIEEk5f6tTDxgdKuw/qc1Cw5SY62o9nChqdZ/qtA8A=</DigestValue>
+<DigestValue>fvjAAKOB1yJ3yEaFq7zArIhTHx2shQZFbKRrew6Fghc=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Ffontawesome%2Fpackage.json">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -5816,31 +5816,31 @@
 </Reference>
 <Reference URI="dependencies%2Fprogressbar.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>ceS5HrVuYSBmAEDWFkSPwOA7rHSGk3WIcq3iCjaP7K4=</DigestValue>
+<DigestValue>ah/Ue04CCU8edfGEkS9M5zR2UmMEsQdprNK1gLIjspM=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>KAPCRNVWWCyi4SoF7GFmHOk+MsLiMKhSd6xX816AKW4=</DigestValue>
+<DigestValue>8fyRIjHnp241cigfci+31a/sv5mQIT86fRT4eeTpNE0=</DigestValue>
 </Reference>
 <Reference URI="image%2Fwatch_bg.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>WK1kkqzJ+rrP0TB0l/9uPho74xwU9bHpu6yHYF0yZxg=</DigestValue>
+<DigestValue>q5a3SkGSnKuRcD4lpUFdCgfXYJ8E5UccrCMw6a2jS8g=</DigestValue>
 </Reference>
 <Reference URI="image%2Fwatch_hand_hour.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>rnPpV1OC77cUR9+GJBNC2bLC3sOjxGLt5byxglcyARE=</DigestValue>
+<DigestValue>n77ImbpwRzK5fgUjpNpPj2sTjQofvSOoD/bVcxLvp84=</DigestValue>
 </Reference>
 <Reference URI="image%2Fwatch_hand_minute.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>8eU42tcW/0gsnN4A5knonDFEOvuoxA6V9HIL1/Us0No=</DigestValue>
+<DigestValue>ABK5WnRAlr8Veo3ASLAWzYVghUdSnsuGnpvgUdK5qo0=</DigestValue>
 </Reference>
 <Reference URI="image%2Fwatch_hand_second.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>gdMSsyZ1ZzjcBizaMlDv2UXZUV66uWjvumcGFU/3Ey8=</DigestValue>
+<DigestValue>4/AAK47+KchQYyPVt42YWBOdIrGe7bvSwbyjYs0/HBI=</DigestValue>
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>LamR2nCo1vHrZDHqJttoYedDVN9TrBhJUQOLUeNxRhg=</DigestValue>
+<DigestValue>IwZ5M+oEGzytDCZlKPmNk70+H99Qu0eOM9LnuhdW3dM=</DigestValue>
 </Reference>
 <Reference URI="js%2FBatteryBar.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -5856,11 +5856,11 @@
 </Reference>
 <Reference URI="js%2Fapp.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>59GTVvTsbNOrIPepA1GoJS3lIeD15Jg2MREH/UXDh88=</DigestValue>
+<DigestValue>QczQKXQKO47rtMidfyR5cN5M21B39Ssy5chvys6Yvps=</DigestValue>
 </Reference>
 <Reference URI="js%2Ffunctions.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>SDukGEq6vfqVYegx4ZcKVcTSoSBBM9r6Ob+L+oes0g4=</DigestValue>
+<DigestValue>u0iF3Vwv2DBVslXfSzF8d9QxUpiq1hSD9E8k3hzJpEA=</DigestValue>
 </Reference>
 <Reference URI="package.json">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -5879,11 +5879,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-XugfjFP8bhoEeFlMnnUGJKQtTyFuPBPQzInVzw382GGZ3qnNbvRmM74/HxDEQwyeuiWNRhnrpSuQ
-KjU0VnKhNpOrO2hee4Kt9+4X3Dw7U7q4A4l5RoytYPYvKsGLyGirlS8oPIrMIOmbreGJxdCub4S0
-d9sHMWXTxMkpmFfVvjKB4CJyvAwo9N4QMjmPuMqGwkUYpXCQ9GGWLr2cjqB5FqbnuKFBBjY0fjPg
-iEQdYHEKC4Ta+QLP8Fi6+kyz5ybnw9Su2zvbYGHswy1r1w9YkejQFzIf3ZP50fA+jgr4wh1U+TdH
-V4btsh4NKvRby0Tmq6xIqqkFg2DXHwz6ol++PQ==
+Wrw1HWRdPJkUpQ5qtRdSGirbW8zizk/M0yICchA0xK/HkCBjs9abT/kp/1b5JqCD9nqs4yp29gkM
+hqmIKUZeopf+JvVCnes1iMCjuLFvrTEAFQ6h6RzpoP5Y1z6BDnBceZ2iQCISyV2A7V8RE47QLiZL
+AG9VsnyQXih4UJOdENhqU9zuRz0sqZ6QofoVK9BQH0tQRyNZYT+fLKoUd8nxkGJeUGpL5SiHYPX6
+4QcTC0JElTifdHFsR7PRnPDH+BHhZrnwsRE54LrXNH2wVDPc7Ses1anF62elVU5kvrGMCkCIT9dI
+Ry+HlH7p++FnQw8sv2QMHVRxpMCO+lWgtCe5NQ==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

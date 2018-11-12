@@ -27,7 +27,6 @@ function bindEvents() {
   });
 }
 
-
 window.onload = () => {
   bindEvents();
 
@@ -39,4 +38,13 @@ window.onload = () => {
   setInterval(() => {
     everyMin();
   }, 60000);
+
+  document.addEventListener('ambientmodechanged', (ev) => {
+    const { ambientMode } = ev.detail;
+    if (ambientMode) {
+      aodOn();
+    } else {
+      aodOff();
+    }
+  });
 };
