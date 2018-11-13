@@ -2,13 +2,6 @@ const batteryBar = new BatteryBar('battery-bar');
 const clock = new Clock('hora', 'minuto', 'segundo', 'dia', 'mes');
 const weather = new Weather('sun-icon', 'moon-icon', 'cloud-icon', 'rain-icon', 'snow-icon', 'temp', 'coord', 'loc-name');
 
-
-function rotateElement(elementID, angle) {
-  var element = document.querySelector("#" + elementID);
-
-  element.style.transform = "rotate(" + angle + "deg)";
-}
-
 function everySec() {
   batteryBar.tic();
   clock.tic();
@@ -19,7 +12,7 @@ function everyMin() {
 }
 
 function bindEvents() {
-  document.addEventListener("visibilitychange", () => {
+  document.addEventListener('visibilitychange', () => {
     if (!document.hidden) {
       everySec();
     }

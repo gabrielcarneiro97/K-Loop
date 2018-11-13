@@ -5,6 +5,7 @@ const dom = {
 
 function html(el, inner) {
   if (!el) return false;
+
   try {
     el.innerHTML = inner;
     return true;    
@@ -15,6 +16,7 @@ function html(el, inner) {
 
 function showElement(el) {
   if (!el) return false;
+
   try {
     el.style.display = 'unset';
     return true;
@@ -25,6 +27,7 @@ function showElement(el) {
 
 function hideElement(el) {
   if (!el) return false;
+
   try {
     el.style.display = 'none';
     return true;
@@ -35,7 +38,19 @@ function hideElement(el) {
 
 function pad(el) {
   el = el.toString();
+
   return el.length === 1 ? `0${el}` : el;
+}
+
+function rotateElement(el, angle) {
+  if (!el || !angle) return false;
+
+  try {
+    el.style.transform = `rotate(${angle}deg)`;
+    return true;    
+  } catch (err) {
+    return err;
+  }
 }
 
 const openWeatherKey = '67793f8e2edddad949ad82665b43655a';
