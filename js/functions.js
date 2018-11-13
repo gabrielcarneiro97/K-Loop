@@ -35,8 +35,7 @@ function hideElement(el) {
 
 function pad(el) {
   el = el.toString();
-  if (el.length === 1) return '0' + el;
-  else return el;
+  return el.length === 1 ? `0${el}` : el;
 }
 
 const openWeatherKey = '67793f8e2edddad949ad82665b43655a';

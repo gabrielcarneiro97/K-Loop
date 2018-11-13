@@ -36,7 +36,7 @@ function alwaysOnDisplayController() {
     }
   });
 
-  document.addEventListener('timetick', function (ev) {
+  document.addEventListener('timetick', () => {
     everySec();
   });
 }
