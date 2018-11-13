@@ -1,4 +1,8 @@
 /node_modules
 /.settings
 /.build
+/.package
+/.sign
+.project
+.tproject
 *.wgt

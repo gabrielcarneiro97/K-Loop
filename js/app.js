@@ -19,7 +19,6 @@ function everyMin() {
 }
 
 function bindEvents() {
-  // Add an event listener to update the screen immediately when the device wakes up
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) {
       everySec();
@@ -27,8 +26,24 @@ function bindEvents() {
   });
 }
 
+function alwaysOnDisplayController() {
+  document.addEventListener('ambientmodechanged', (ev) => {
+    const { ambientMode } = ev.detail;
+    if (ambientMode) {
+      aodOn();
+    } else {
+      aodOff();
+    }
+  });
+
+  document.addEventListener('timetick', function (ev) {
+    everySec();
+  });
+}
+
 window.onload = () => {
   bindEvents();
+  alwaysOnDisplayController();
 
   setInterval(() => {
     everySec();
@@ -38,13 +53,4 @@ window.onload = () => {
   setInterval(() => {
     everyMin();
   }, 60000);
-
-  document.addEventListener('ambientmodechanged', (ev) => {
-    const { ambientMode } = ev.detail;
-    if (ambientMode) {
-      aodOn();
-    } else {
-      aodOff();
-    }
-  });
 };

@@ -12,7 +12,7 @@
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>/QoKCWD1jFbLAAkdxlrq/FB84cxm8KA2JOSiD4J2xm0=</DigestValue>
+<DigestValue>Dt5h0Rmq87uWRONVZfv4w4WisxoPrCWhQ2ZiSYKVrME=</DigestValue>
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -5836,7 +5836,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>IwZ5M+oEGzytDCZlKPmNk70+H99Qu0eOM9LnuhdW3dM=</DigestValue>
+<DigestValue>W6LLnRptEFtJYo1MVMoe/n+kThJjv7kzbUp3XzV+0GU=</DigestValue>
 </Reference>
 <Reference URI="js%2FBatteryBar.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -5852,7 +5852,7 @@
 </Reference>
 <Reference URI="js%2Fapp.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>QczQKXQKO47rtMidfyR5cN5M21B39Ssy5chvys6Yvps=</DigestValue>
+<DigestValue>9I1a++TE2uMLK0UkhspVkHXggMI4PpfEgJhaq3Gr7gk=</DigestValue>
 </Reference>
 <Reference URI="js%2Ffunctions.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -5875,11 +5875,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-fHXK1zh8g6LEPyzUuQuTbJ4zvSktTOBr0YjvjbphJWrB09pHaODSLuAEG7Jjj3ycE/Ede3hKebTb
-10ZCG0+AZV7kYoIOnCkMm6Bpz7WaU4rFwwWVDhy05ObxM/xum5SLwrivT66ge8oCpTTbubvZs/EM
-LOWJnSyOhOnjcUCTfr4n1cQ6qOzocdkvogixN8jBTVnmGiWciUipA7iaPmP51rL2Zt5D7Oup3I4J
-Id4HZNaHuurwHBrCQ4/uLWmftvvnjf2gnc/jznJVISW598BAtqidmccTPE/rw4F+50kCjglClwQR
-kclkY1tMLI/UVc3HHWKCV0iFsLGz2X//fctRxQ==
+VjX4XUZnibHHpa7PkUuub8uR7ODbMWkYyxorHbAvzs58C607Vxl74+bZhptM5fvmtM4VDtwhj4EC
+yzK5dXoepNUvzSRG36amU1uWen7dr5h70Jd9X7I+i/LySvIqFbK0cJEm0OmKHxVKJT8XSyP5iPaC
+wmxOoDV4oTvhW0CjkYA+9Q8ex8Di7/J0dA+WYge+vcrPvzIjCNof87lHlhGOTV76f9bayOEHAzEm
+soYkpWAsQf2p748b9fjzO2fNbvXjR5SKdlwqlVdxt1KY+qo+pDpIJNZyg2CFkRrt5RUh6qE3jP3Y
+FUQBVFTxEy/qRjo1crGq5IiYI4xzGV/DHc8T+A==
 </SignatureValue>
 <KeyInfo>
 <X509Data>
