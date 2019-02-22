@@ -12,15 +12,19 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>5IGqTaCfYuEleJTjv4O+cWgS4Fi+msliPYGHT0BIy+k=</DigestValue>
+<DigestValue>nNHuvwkoYSX/AI+HoxxsACA7/GQ8Jd55C+m9H/PMbYI=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>Dt5h0Rmq87uWRONVZfv4w4WisxoPrCWhQ2ZiSYKVrME=</DigestValue>
 </Reference>
+<Reference URI="css%2FSamsungSans.ttf">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>XHsWHoqDHhTHYlOZbJaLlmz/1ZR1wm5NESpkU1SzBIk=</DigestValue>
+</Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>BUGbB0q4puDcIoXeqAaXChCuSgE0I2p24WDNv6PWcSE=</DigestValue>
+<DigestValue>WSWlvOf5a54WIWCddKzfF8oBLWhEIijbKu/tGmK8yAk=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Faxios.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -5863,11 +5867,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-OEBUYAe2kyC/H3U/LwqdJk1g01ZLswAVSwIzzKhY9DLeO2g0miZ20oYQvY/cc55/G7KzunzDFffz
-NX49OAFYEDWqyy/WZUHv2hJFDBiB9yTAmJdcZCCRiSaRtAPtFFTE95X8BxOPFlkg6esOjh23YhXl
-EEjrdUdLuOgYf3+vvZxdj3CX4o53En1o8jhSyjESY9ffML+a8zkeCZBJDVdYWuRz1Z7bb7ND6g70
-Z2yHnuOQVSAj4RxlavbsnE3qRpXDZqckaZtJ5CUa+u812cZg207FH8/EetkFLXgLD3hjWenkA6+F
-CCE7gI1asWHCXF/9q/kSJj/lecL2MI3eAwOctw==
+aOqWgaVzuH0u8tjU5EJSfgzyxOCfBnHKoqbEFGawFVO1Rm1yxq5NvGZ0ys4GgYrzu41+oYDGOYYO
+2X5qUGhJG01hdugRblhT9vm4TtlI5302dxMKFOgs4avSmGyjaIPqN/EkWAE4Ri4BJipQI919aUzD
+J6QHQwFXJQBREi0iODCRG2oHj7XWWdj5R+EzhTEHfnYKg7O5i9LstqReS307t9g4OGl1R04Crs7P
+fBaeRagaUlB0Pu/9lmn717kRuzILrukaRImla0JvKryKGWKaRhgN1BozkuUbQDiAW6MNOoRRJ2Sn
+eWCAPPKra66vPZHYkqqhSATFtRKTPSeEzj5pYg==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

@@ -14,9 +14,13 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>Dt5h0Rmq87uWRONVZfv4w4WisxoPrCWhQ2ZiSYKVrME=</DigestValue>
 </Reference>
+<Reference URI="css%2FSamsungSans.ttf">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>XHsWHoqDHhTHYlOZbJaLlmz/1ZR1wm5NESpkU1SzBIk=</DigestValue>
+</Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>BUGbB0q4puDcIoXeqAaXChCuSgE0I2p24WDNv6PWcSE=</DigestValue>
+<DigestValue>WSWlvOf5a54WIWCddKzfF8oBLWhEIijbKu/tGmK8yAk=</DigestValue>
 </Reference>
 <Reference URI="dependencies%2Faxios.min.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -5859,11 +5863,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-nhMg38a/eot4IRoKGNVgWZ5WhGQ3M6+e7kWypFUd7ojRhZRcGXR1xofIdj1GfN5nmONIHCWw7AQ9
-Kob3J+XHlgMysAbKX/Lpdmua4BZIRoUKMQXX5cMpeZXbMHqWTnyEzW10M5s/9mjmeVYQmnKtkHKE
-nhWBjWugoJC/26Z+/d+zN1nmpJWC84BgKGsx2mgsDJL7kTJFF6REQelELV2bCieqr9hjELrNhV2l
-Tc65BKrGHtVxZE+RsTj6Zpmvrxog7FSUR+JqXuofk7vUOFkc6tzWz5GBM8TS35TUt7NnfL0KcKv+
-13NW43sTTRFidvLQIKs15HGcULVNKbmzaYq74w==
+jyaZd+rxICu+d7ngabkSgs28fIO+WYfbCVF9a9CBRib0fZqaBZFvLRBQx9YF5/6WSwLpMjzSK3l/
+h9msbVZ+ntCiOBrcGyS7JZ3ULAgbqeUpuFbONA2/W6mvJpa90zCg/xCds6MLJW4LxEwaVVvDP5a7
+ie89tOpmNqf6/oNvCinvwhOnEGF5UwtBYlNvUT3TmvuWKoVLSAFqBBWNsp0CfsZwjajlEev31V2A
+Ue3HkLBhMYOCGr8dftdvBtfkR/ewvAOccpFzTvv2burXz3vu5aGxyjjaTyhnVNcdKJfHXESA3FaM
+O276DmI40DUXdaJaHp/z7rlKq/eibQ4ovMMg3Q==
 </SignatureValue>
 <KeyInfo>
 <X509Data>
